@@ -9,7 +9,7 @@
                 "xmlParser.js",
                 "background.js"
             ],
-            "matches": ["*://*/*"],
+            "matches": ["https://*.commonapp.org/*"],
             "run_at": "document_end"
         }
     ],

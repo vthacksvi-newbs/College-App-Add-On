@@ -28,6 +28,12 @@
 	<citizenship>United States</citizenship>
 	<military>No</military>
 	<language>English</language>
+	<contact>
+		<phone>
+			<home>123-456-7890</home>
+			<mobile>234-567-8901</mobile>
+		</phone>
+	</contact>
 </me>
 <address>
 	<home>

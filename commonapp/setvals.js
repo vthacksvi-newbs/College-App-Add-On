@@ -34,7 +34,9 @@ function SetValue_radio(d, v) {
 }
 
 function SetValue_short(d, v) {
-	d.querySelector("input.input").value = v
+	var input = d.querySelector("input.input")
+	input.value = v
+	$(input).blur()
 }
 
 function setValue(id, v) {

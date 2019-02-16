@@ -5,5 +5,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         fields = request.fields; // use the data
         sendResponse({ response: "imported" });
     }
+
+    
 });
 

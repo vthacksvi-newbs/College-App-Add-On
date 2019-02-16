@@ -18,9 +18,13 @@
       </style>
     </head>
     <body>
-      <p> Upload an XML file </p>
-      <input type="file"> 
-      
-      <p>you shouldnt be seeing this</p>
+      <label for="file"> Upload an XML file </label>
+      <input id="file" type="file"> 
+      <label for="run">Run autofill</label>
+      <button id="run" onclick="main()"></button>
+	  <script type="text/javascript" src="/commonapp/lookup.js"></script>
+	  <script type="text/javascript" src="/commonapp/setval.js"></script>
+	  <script type="text/javascript" src="/commonapp/main.js"></script>
+	  <script type="text/javascript" src="/main.js"></script>
     </body>
   </html>

@@ -3,8 +3,8 @@
     "version": "1.0",
     "description": "Save college information to an extension",
     "manifest_version": 2,
-    "web_accessible_resources": ["logo.png"],
-    "icons": {"128": "logo.png"},
+//    "web_accessible_resources": ["logo.png"],
+//    "icons": {"128": "logo.png"},
     "content_scripts": [
         {
             "js": [
@@ -20,6 +20,6 @@
     "browser_action": {
         "browser_style": true,
         "default_title": "College App Submitter",
-        "default_icon": "browseraction.png"
+        // "default_icon": "browseraction.png"
     }
 }

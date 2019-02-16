@@ -19,10 +19,3 @@ function onUploadFile(file_input) {
 
 	reader.readAsText(file.slice())
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-	browser.tabs.create({
-		url: "/fullscreen.html"
-	})
-	window.close()
-});

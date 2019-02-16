@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<user_info>
+<me>
+	<name>
+		<first>Barry</first>
+		<middle>Johnathan</middle>
+		<last>Bluejeans</last>
+		<suffix></suffix>
+	</name>
+	<birth>
+		<date>07-06-2005</date>
+		<location>
+			<country> United States </country>
+			<state>Virginia</state>
+			<city> StarBlaster </city>
+		</location>
+	</birth>
+	<gender> Male </gender>
+	<sex> Male </sex>
+</me>
+</user_info>

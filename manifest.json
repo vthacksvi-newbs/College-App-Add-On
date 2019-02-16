@@ -2,5 +2,15 @@
     "name": "College Applications",
     "version": "1.0",
     "description": "Save college information to an extension",
-    "manifest_version": 2
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "js": [
+                "xmlParser.js",
+                "background.js"
+            ],
+            "matches": ["*://*/*"],
+            "run_at": "document_end"
+        }
+    ],
 }

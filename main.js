@@ -21,8 +21,8 @@ function onUploadFile(file_input) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	console.log("hi")
 	browser.tabs.create({
 		url: "/fullscreen.html"
 	})
+	window.close()
 });

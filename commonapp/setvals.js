@@ -39,6 +39,12 @@ function SetValue_short(d, v) {
 	$(input).blur()
 }
 
+function SetValue_date(d, v) {
+	SetValue_dropdown(d.querySelector("label[aria-label*=Month]"), String(v.getMonth() + 1).padStart(2, "0"))
+	SetValue_dropdown(d.querySelector("label[aria-label*=Day]"), String(v.getDate()).padStart(2, "0"))
+	SetValue_dropdown(d.querySelector("label[aria-label*=Year]"), String(v.getFullYear()))
+}
+
 function setValue(id, v) {
 	var elem = document.getElementById(id)
 	if (elem.classList.contains("short")) {
@@ -47,5 +53,7 @@ function setValue(id, v) {
 		return SetValue_dropdown(elem, v)
 	} else if (elem.classList.contains("singleSelectRadio")) {
 		return SetValue_radio(elem, v)
+	} else if (elem.classList.contains("date")) {
+		return SetValue_date(elem, v)
 	}
 }

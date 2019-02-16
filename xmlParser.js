@@ -1,23 +1,35 @@
-//JavaScript file to parse XML files
+//Upload the xml file
 
-var xmlCont = chrome.runtime.getURL("xmlFile.xml"); //this returns the FULL_PATH of the .xml file [NOT THE XML NODES]
-            console.log(xmlCont) //You can see it here
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.message == "chooseFile") {
+    /* Creates an `input[type="file]` */
+    var fileChooser = document.createElement('input');
+    fileChooser.type = 'file';
 
-                    $.ajax({                    
-                          type: "GET" , 
-                          url: xmlCont,//Place that FULL_PATH here 
-                          dataType: "xml" , //This too is important 
+    fileChooser.addEventListener('change', function () {
+      console.log("file change");
+      var file = fileChooser.files[0];
 
-                         success: function(xml) { 
+      var reader = new FileReader();
+      reader.onload = function () {
+        var data = reader.result;
+        fields = $.parseJSON(data);
+        // now send the message to the background
+        chrome.runtime.sendMessage({ message: "import", fields: fields }, function (response) {
+          console.log(response.response);
+        });
+      };
+      reader.readAsText(file);
+      form.reset();   // <-- Resets the input so we do get a `change` event,
+      //     even if the user chooses the same file
+    });
 
-                          console.log(xml)// see the ajax results if your curious
+    /* Wrap it in a form for resetting */
+    var form = document.createElement('form');
+    form.appendChild(fileChooser);
 
-                        //var xmlDoc = $.parseXML( xml );//NOT NEED FOR THIS
+    fileChooser.click();
+    sendResponse({ response: "fileChooser clicked" });
+  }
 
-                        //console.log(xmlDoc);// if you parseXML it returns null
-
-                        var title = $(xml).find('value').text(); //Show the text between the <title> tags
-                        console.log(title);
-
-                    }    
-                        });
+});

@@ -1,6 +1,9 @@
 //Background JavaScript file
 
-chrome.runtime.onInstalled.addListener(function () {
-    // add an action here
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.message == "import") {
+        fields = request.fields; // use the data
+        sendResponse({ response: "imported" });
+    }
 });
 

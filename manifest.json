@@ -9,13 +9,15 @@
                 "xmlParser.js",
                 "background.js"
             ],
-            "matches": ["https://*.commonapp.org/*"],
+            "matches": [
+                "*://*/*"
+            ],
             "run_at": "document_end"
         }
     ],
     "browser_action": {
-      "browser_style": true,
-      "default_title": "College App Submitter",
-      "default_popup": "popup.html"
+        "browser_style": true,
+        "default_title": "College App Submitter",
+        "default_popup": "popup.html"
     }
 }

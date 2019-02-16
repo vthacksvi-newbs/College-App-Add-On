@@ -10,12 +10,80 @@
 	<birth>
 		<date>07-06-2005</date>
 		<location>
-			<country> United States </country>
+			<country>United States</country>
 			<state>Virginia</state>
-			<city> StarBlaster </city>
+			<city>StarBlaster</city>
 		</location>
 	</birth>
-	<gender> Male </gender>
-	<sex> Male </sex>
+	<identity>
+		<gender>Male</gender>
+		<sex>Male</sex>
+		<race>White</race>
+		<religion>Scientology</religion>
+		<sexuality>Straight</sexuality>
+	</identity>
+	<SSN> 012-345-6789 </SSN>
+	<mar_stat>Single</mar_stat>
+	<children></children>
+	<citizenship>United States</citizenship>
+	<military>No</military>
+	<language>English</language>
 </me>
+<address>
+	<home>
+		<street>6969 Cool St</street>
+		<city>StarBlaster</city>
+		<state>Virginia</state>
+		<zip>66666</zip>
+		<country>United States</country>
+	<home>
+	<alt>
+		<street>420 Blazeit St</street>
+		<city>Astral</city>
+		<state>Virginia</state>
+		<zip>66666</zip>
+		<country>United States</country>
+	</alt>
+</address>
+<family>
+	<income>69,420</income>
+	<histroy>
+		<siblings>0</sibling>
+		<parent1>
+			<relation>Mother</relation>
+			<name>
+				<prefix>Mrs.</prefix>
+				<first>Lucretia</first>
+				<last>Balance</last>
+			</name>
+			<mar_stat>Divorced</mar_stat>
+		</parent1>
+		
+		<parent2>
+			<relation>Father</relation>
+			<name>
+				<prefix>Mr.</prefix>
+				<first>Davenport</first>
+				<last>Davenport</last>
+			</name>
+			<mar_stat>Divorced</mar_stat>
+		</parent2>
+	</history>
+	
+</family>
+<tests>
+	<SAT>
+		<read_write>600</read_write>
+		<math>720</math>
+		<essay>5</essay>
+	</SAT>
+	<ACT>
+		<math>33</math>
+		<science>33</science>
+		<english>27</english>
+		<reading>30</reading>
+		<writing>7</writing>
+	</ACT>
+</test>
+
 </user_info>

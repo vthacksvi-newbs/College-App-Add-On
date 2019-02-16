@@ -1,4 +1,7 @@
 function SetValue_dropdown(d, v) {
+	if (v === null) {
+		v = ""
+	}
 	var actual_dropdown = d.querySelector("select")
 	actual_dropdown.value = v
 
@@ -6,14 +9,16 @@ function SetValue_dropdown(d, v) {
 
 	var input = d.querySelector(".chzn-search > input")
 
-	input.dispatchEvent(new KeyboardEvent("keyup", {keyCode: 32}))
+	if (v !== "") {
+		input.dispatchEvent(new KeyboardEvent("keyup", {keyCode: 32}))
 
-	input.dispatchEvent(new KeyboardEvent("keyup", {
-		keyCode: 13,
-		bubbles: true,
-		cancelable: true,
-		which: 13,
-	}))
+		input.dispatchEvent(new KeyboardEvent("keyup", {
+			keyCode: 13,
+			bubbles: true,
+			cancelable: true,
+			which: 13,
+		}))
+	}
 }
 
 function SetValue_radio(d, v) {

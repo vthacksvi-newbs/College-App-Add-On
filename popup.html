@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        body {
-          display: block;
-          height: 300px;
-          width: 200px;
-          outline-color:lightseagreen;
-          outline-width:medium;
-          text-align: center;
-        }
-        body:focus {
-          outline: none;
-        }
-        button {
-          height: 20px;
-          width: 80px;
-          outline: none;
-        }
-      </style>
-    </head>
-    <body>
-      <label for="file"> Upload an XML file </label>
-      <input id="file" type="file"> 
-      <label for="run">Run autofill</label>
-      <button id="run" onclick="main()"></button>
-	  <script type="text/javascript" src="/commonapp/lookup.js"></script>
-	  <script type="text/javascript" src="/commonapp/setval.js"></script>
-	  <script type="text/javascript" src="/commonapp/main.js"></script>
-	  <script type="text/javascript" src="/main.js"></script>
-    </body>
-  </html>
+<html>
+
+<head>
+  <style>
+    body {
+      display: block;
+      height: 300px;
+      width: 200px;
+      outline-color: lightseagreen;
+      outline-width: medium;
+      text-align: center;
+    }
+
+    body:focus {
+      outline: none;
+    }
+
+    button {
+      height: 20px;
+      width: 80px;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body bgcolor="#E6E6FA">
+  <h1> College EZ App </h1>
+  <p> <br> </p>
+  <label for="file"> Upload an XML file </label>
+  <p> <br> </p>
+  <input id="file" type="file"> 
+  <p> <br> </p>
+  <label for="run">Run autofill</label>
+  <button id="run" onclick="main()"></button>
+  <script type="text/javascript" src="/commonapp/lookup.js"></script>
+  <script type="text/javascript" src="/commonapp/setval.js"></script>
+  <script type="text/javascript" src="/commonapp/main.js"></script>
+  <script type="text/javascript" src="/main.js"></script>
+</body>
+
+</html>

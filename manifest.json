@@ -19,7 +19,7 @@
     ],
     "browser_action": {
         "browser_style": true,
-        "default_title": "College App Submitter",
+        "default_title": "College App Submitter"
         // "default_icon": "browseraction.png"
     }
 }

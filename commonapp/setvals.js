@@ -5,7 +5,8 @@ function SetValue_dropdown(d, v) {
 	var actual_dropdown = d.querySelector("select")
 	actual_dropdown.value = v
 
-	$._data($(actual_dropdown)[0]).events["liszt:updated"][0].handler()
+	// $._data($(actual_dropdown)[0]).events["liszt:updated"][0].handler()
+	// would be nice if I could disable xray...
 
 	var input = d.querySelector(".chzn-search > input")
 
@@ -26,6 +27,9 @@ function SetValue_radio(d, v) {
 	for (var i in buttons) {
 		var rb = buttons[i]
 		var label = d.querySelector("label[for=" + rb.id + "]")
+		if (label == null) {
+			return;
+		}
 		if (label.innerText == v) {
 			rb.click()
 			return

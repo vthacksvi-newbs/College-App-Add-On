@@ -1,5 +1,5 @@
 function extractXmlValue(id) {
-	return {
+	var responseFunc = {
 		"container_ques_173": function() { // first name
 			//return getxmlvalue(me.name.first)
 			return "firstname"
@@ -61,13 +61,13 @@ function extractXmlValue(id) {
 			return "yes"
 		},
 		"container_ques_201": function() { //latino/hispanic identification
-		return new list['Central America', 'Cuba', "Spain"]
+		return ['Central America', 'Cuba', "Spain"]
 		},
 		"container_ques_202": function() { //other hispanic identification
 			return null // no additional ethnicity
 		},
 		"container_ques_203": function() { //race
-			return new list["White"]
+			return ["White"]
 		},
 		"container_ques_206": function() { //Native american federally recognized tribe?
 			return null // no tribe
@@ -103,7 +103,7 @@ function extractXmlValue(id) {
 			return null // not pacific islander
 		},
 		"container_ques_216": function() { //white background
-			return new list ["Europe"];
+			return ["Europe"];
 		},
 		"container_ques_217": function() { //other white
 			return null //not other white
@@ -137,5 +137,11 @@ function extractXmlValue(id) {
 		"container_ques_1021": function() { //Fee waver
 			return "Yes"
 		}
-	}[id]()
+	}[id]
+
+	if (responseFunc == undefined) {
+		return null;
+	}
+
+	responseFunc()
 }

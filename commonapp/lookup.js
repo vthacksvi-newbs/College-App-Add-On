@@ -58,7 +58,7 @@ function extractXmlValue(id) {
 			return "None"
 		},
 		"container_ques_200": function() { //hispanic or latino?
-			return "yes"
+			return "Yes"
 		},
 		"container_ques_201": function() { //latino/hispanic identification
 		return ['Central America', 'Cuba', "Spain"]
@@ -109,7 +109,8 @@ function extractXmlValue(id) {
 			return null //not other white
 		},
 		"container_ques_218": function() { // country of birth
-			return "United States of America"
+			//return "United States of America"
+			return 0;
 		},
 		"container_ques_219": function() { // city of birth
 			return "Arlington"
@@ -140,8 +141,8 @@ function extractXmlValue(id) {
 	}[id]
 
 	if (responseFunc == undefined) {
-		return null;
+		return undefined;
 	}
 
-	responseFunc()
+	return responseFunc()
 }

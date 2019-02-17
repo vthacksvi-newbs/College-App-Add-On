@@ -1,4 +1,4 @@
-function extractXmlValue(id) {
+function extractXmlValue(xml, id) {
 	var responseFunc = {
 		"container_ques_173": function() { // first name
 			//return getxmlvalue(me.name.first)

@@ -45,8 +45,8 @@ function extractXmlValue(id) {
 			return "Home" 
 		},
 		"container_ques_191": function() {
-			
-		
+			// ?
+		},
 		"container_ques_192": function() { //religion
 			return "Scientology"
 		},
@@ -62,7 +62,7 @@ function extractXmlValue(id) {
 		},
 		"container_ques_201": function() { //latino/hispanic identification
 		return new list['Central America', 'Cuba', "Spain"]
-		}'
+		},
 		"container_ques_202": function() { //other hispanic identification
 			return null // no additional ethnicity
 		},
@@ -129,17 +129,13 @@ function extractXmlValue(id) {
 		///
 		///
 		"container_ques_234": function() { //citizenship status
-			return "U.S. Citizen or U.S. National
+			return "U.S. Citizen or U.S. National"
 		},
 		"container_ques_235": function() { //SSN if applying for fasfa
 			return "123-456-7890"
 		},
 		"container_ques_1021": function() { //Fee waver
 			return "Yes"
-		},
-		
-		
-			
-		
+		}
 	}[id]()
 }

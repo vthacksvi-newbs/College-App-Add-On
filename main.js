@@ -1,8 +1,3 @@
-function main() {
-	get_question_ids().forEach(id => {
-		setValue(id, extractXmlValue(id));
-	})
-}
 function onUploadFile(file_input) {
 	var file = file_input.files[0]
 
@@ -18,4 +13,15 @@ function onUploadFile(file_input) {
 
 
 	reader.readAsText(file.slice())
+}
+
+if (chrome !== undefined) {
+	var browser = chrome
+}
+
+run.onclick = () => {
+	browser.tabs.executeScript({file: "/commonapp/iterate.js"})
+	browser.tabs.executeScript({file: "/commonapp/setvals.js"})
+	browser.tabs.executeScript({file: "/commonapp/lookup.js"})
+	setTimeout(() => browser.tabs.executeScript({file: "/commonapp/main.js"}), 100) // just in case
 }

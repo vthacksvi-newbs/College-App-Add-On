@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     fileChooser.addEventListener('change', function () {
       console.log("file change");
       var file = fileChooser.files[0];
-
+      
       var reader = new FileReader();
       reader.onload = function () {
         var data = reader.result;

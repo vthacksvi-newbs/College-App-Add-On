@@ -1,6 +1,10 @@
 file.onchange =  function () {
 	var loadedfile = file.files[0]
-	
+
+	if (loadedfile === undefined) {
+		return
+	}
+
 	const reader = new FileReader();
 
 	// This fires after the blob has been read/loaded.

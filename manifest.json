@@ -31,5 +31,10 @@
 
     "icons": { 
         "48": "icon48.png"
-    }
+    },
+		"browser_specific_settings": {
+			"gecko": {
+				"id": "addon@vthacksvi-newbs.com"
+			}
+		}
 }

@@ -1,5 +1,9 @@
 // main loop
 
+if (browser === undefined) {
+	var browser = chrome
+}
+
 browser.runtime.onMessage.addListener(request => {
 	console.log("start")
 	console.log(request);

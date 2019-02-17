@@ -15,8 +15,7 @@ function SetValue_dropdown(d, v) {
 	var actual_dropdown = d.querySelector("select")
 	actual_dropdown.value = v
 
-	// $._data($(actual_dropdown)[0]).events["liszt:updated"][0].handler()
-	// would be nice if I could disable xray...
+	actual_dropdown.dispatchEvent(new Event("liszt:updated"))
 
 	var input = d.querySelector(".chzn-search > input")
 

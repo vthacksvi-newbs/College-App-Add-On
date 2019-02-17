@@ -1,6 +1,19 @@
+<!--
+  Popup file that determines the dimensions and features of the popup,
+  the main front end user interaction, and handles the method that the user
+  will upload a file/information to the extension
+-->
+
 <!DOCTYPE html>
 <html>
+  
+<!--
+  Popup dimensions, defines the size of the popup, the shape of the popup
+  the background color, outline, and text align used for the popup
 
+  Defines the body:focus, button appearance and dimensions, and the first
+  main header found on the popup menu
+-->
 <head>
   <style>
     body {
@@ -30,6 +43,15 @@
   </style>
 </head>
 
+<!--
+  Main style for the body, defining the color of certain texts on the popup,
+  secondary headers, spacing and information given to the users, button placement
+  for the upload of an xml file needed, and a graphic displaying whether or not
+  the extension has received a readable file or not
+
+  Also runs the javascript files needed to read the file, change the image of the popup
+  and other various tools necessary for the extension to perform it's actions
+-->
 <body bgcolor="#E6E6FA">
   <font color = "orange">
   <h1> College EZ App </h1>

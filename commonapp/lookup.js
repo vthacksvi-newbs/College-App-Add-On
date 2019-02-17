@@ -2,7 +2,12 @@ function extractXmlValue(xml, id) {
 	var responseFunc = {
 		"container_ques_173": function() { // first name
 			//return getxmlvalue(me.name.first)
-			return xml.querySelector("user_info > me > name > first").textContent
+			console.log(xml.querySelector("user_info"))
+			console.log(xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first"))
+			console.log(xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first").nodeValue)
+			console.log(xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first").innerText)
+			console.log(xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first").textContent)
+			return xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first").textContent
 		},
 		"container_ques_174": function() { // middle name
 			return "middlename"

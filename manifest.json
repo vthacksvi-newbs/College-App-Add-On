@@ -24,6 +24,8 @@
     "permissions": [
         "https://apply.commonapp.org/*",
         "https://app.commonapp.org/*",
-        "tabs"
+        "tabs",
+		"storage"
+		
     ]
 }

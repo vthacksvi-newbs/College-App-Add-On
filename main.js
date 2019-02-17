@@ -1,18 +1,20 @@
-function onUploadFile(file_input) {
-	var file = file_input.files[0]
+file.onchange =  function () {
+	console.log(file);
+	console.log(file.files);
+	var loadedfile = file.files[0]
 
 	const reader = new FileReader();
 
 	// This fires after the blob has been read/loaded.
 	reader.addEventListener('loadend', (e) => {
 		browser.storage.sync.set({
-			"name": file.name,
+			"name": loadedfile.name,
 			"file": e.target.result
 		})
 	});
 
 
-	reader.readAsText(file.slice())
+	reader.readAsText(loadedfile.slice());
 }
 
 if (chrome !== undefined) {

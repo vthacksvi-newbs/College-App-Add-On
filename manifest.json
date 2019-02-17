@@ -27,5 +27,9 @@
         "tabs",
 		"storage"
 		
-    ]
+    ],
+
+    "icons": { 
+        "48": "icon48.png"
+    }
 }

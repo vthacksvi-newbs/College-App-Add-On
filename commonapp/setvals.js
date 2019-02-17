@@ -1,6 +1,13 @@
-/*
+/**
+ * Function that sets the value of the dropdown menus to a certain value
+ * depending on the information provided by the user
 
-*/
+ * Dispatches the number for the position of the array to emulate selection
+ * of the choice based on the user's information
+ * @param {*} d 
+ * @param {*} v 
+ */
+
 function SetValue_dropdown(d, v) {
 	if (v === null) {
 		v = ""

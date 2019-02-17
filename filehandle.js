@@ -10,4 +10,4 @@ function toText() {
 	console.log(texte);
 }
 
-file.addEventListener("change", toText);
+//file.addEventListener("change", toText);

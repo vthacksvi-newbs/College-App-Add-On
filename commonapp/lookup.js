@@ -2,7 +2,7 @@ function extractXmlValue(xml, id) {
 	var responseFunc = {
 		"container_ques_173": function() { // first name
 			//return getxmlvalue(me.name.first)
-			return "firstname"
+			return xml.querySelector("user_info > me > name > first").innerText
 		},
 		"container_ques_174": function() { // middle name
 			return "middlename"

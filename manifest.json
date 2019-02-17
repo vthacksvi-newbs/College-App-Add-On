@@ -3,7 +3,6 @@
     "version": "1.0",
     "description": "Save college information to an extension",
     "manifest_version": 2,
-
     "content_scripts": [
         {
             "js": [
@@ -17,17 +16,14 @@
             "run_at": "document_end"
         }
     ],
-    
     "browser_action": {
         "browser_style": true,
         "default_title": "College App Submitter",
         "default_popup": "popup.html"
     },
-
     "permissions": [
-      "https://apply.commonapp.org/*",
-      "https://app.commonapp.org/*",
-      "tabs"
+        "https://apply.commonapp.org/*",
+        "https://app.commonapp.org/*",
+        "tabs"
     ]
-
 }

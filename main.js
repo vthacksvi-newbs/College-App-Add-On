@@ -20,8 +20,8 @@ if (chrome !== undefined) {
 }
 
 run.onclick = () => {
-	browser.tabs.executeScript({file: "/commonapp/iterate.js"})
-	browser.tabs.executeScript({file: "/commonapp/setvals.js"})
-	browser.tabs.executeScript({file: "/commonapp/lookup.js"})
-	setTimeout(() => browser.tabs.executeScript({file: "/commonapp/main.js"}), 100) // just in case
+	browser.tabs.executeScript({ file: "/commonapp/iterate.js" })
+	browser.tabs.executeScript({ file: "/commonapp/setvals.js" })
+	browser.tabs.executeScript({ file: "/commonapp/lookup.js" })
+	setTimeout(() => browser.tabs.executeScript({ file: "/commonapp/main.js" }), 100) // just in case
 }

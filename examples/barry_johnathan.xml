@@ -42,7 +42,7 @@
 		<state>Virginia</state>
 		<zip>66666</zip>
 		<country>United States</country>
-	<home>
+	</home>
 	<alt>
 		<street>420 Blazeit St</street>
 		<city>Astral</city>
@@ -53,8 +53,8 @@
 </address>
 <family>
 	<income>69,420</income>
-	<histroy>
-		<siblings>0</sibling>
+	<history>
+		<siblings>0</siblings>
 		<parent1>
 			<relation>Mother</relation>
 			<name>
@@ -90,6 +90,6 @@
 		<reading>30</reading>
 		<writing>7</writing>
 	</ACT>
-</test>
+</tests>
 
 </user_info>

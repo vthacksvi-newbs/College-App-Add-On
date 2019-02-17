@@ -4,13 +4,13 @@ function extractXmlValue(xml, id) {
 			return xml.querySelector("user_info > me > name > first").textContent
 		},
 		"container_ques_174": function() { // middle name
-			return "middlename"
+			return xml.querySelector("user_info > me > name > middle").textContent
 		},
 		"container_ques_175": function() { // middle name
-			return "lastname"
+			return xml.querySelector("user_info > me > name > last").textContent
 		},
 		"container_ques_176": function() { // suffix
-			return null // no suffix
+			return xml.querySelector("user_info > me > name > suffix").textContent
 		},
 		"container_ques_179": function() { // preferred name aka nickname
 			return null // no nickname
@@ -22,13 +22,13 @@ function extractXmlValue(xml, id) {
 			return null // no former last name
 		},
 		"container_ques_180": function() { // sex
-			return "Male"
+			return xml.querySelector("user_info > me > identity > sex").textContent
 		},
 		"container_ques_1901": function() { // gender identity
-			return "" // or null, no additional gender identity
+			return xml.querySelector("user_info > me > identity > gender").textContent
 		},
 		"container_ques_181": function() { // date of birth
-			return new Date(2000, 1, 1)
+			return new Date(xml.querySelector("user_info > me > birth > date").textContent)
 		},
 		//
 		//Adddress tab functions go here
@@ -47,7 +47,7 @@ function extractXmlValue(xml, id) {
 			// ?
 		},
 		"container_ques_192": function() { //religion
-			return "Scientology"
+			return xml.querySelector("user_info > me > identity > religion").textContent
 		},
 		"container_ques_193": function() { // other religion
 			return null // no other religion
@@ -66,7 +66,7 @@ function extractXmlValue(xml, id) {
 			return null // no additional ethnicity
 		},
 		"container_ques_203": function() { //race
-			return ["White"]
+			return [xml.querySelector("user_info > me > identity > race").textContent]
 		},
 		"container_ques_206": function() { //Native american federally recognized tribe?
 			return null // no tribe
@@ -112,10 +112,10 @@ function extractXmlValue(xml, id) {
 			return 0;
 		},
 		"container_ques_219": function() { // city of birth
-			return "Arlington"
+			return xml.querySelector("user_info > me > birth > location > city").textContent
 		},
 		"container_ques_220": function() { //state of birth (if United States or canada)
-			return "Virginia"
+			return xml.querySelector("user_info > me > birth > location > state").textContent
 		},
 		"container_ques_221": function() { //years in United States
 			return null //will do in future

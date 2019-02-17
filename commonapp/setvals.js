@@ -55,7 +55,7 @@ function SetValue_short(d, v) {
 }
 
 function SetValue_date(d, v) {
-	console.log("SetValue_date : " + d + " : " + v)
+	console.log(String(v.getMonth() + 1).padStart(2, "0"))
 	SetValue_dropdown(d.querySelector("label[aria-label*=Month]"), String(v.getMonth() + 1).padStart(2, "0"))
 	SetValue_dropdown(d.querySelector("label[aria-label*=Day]"), String(v.getDate()).padStart(2, "0"))
 	SetValue_dropdown(d.querySelector("label[aria-label*=Year]"), String(v.getFullYear()))

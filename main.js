@@ -1,8 +1,6 @@
 file.onchange =  function () {
-	console.log(file);
-	console.log(file.files);
 	var loadedfile = file.files[0]
-
+	
 	const reader = new FileReader();
 
 	// This fires after the blob has been read/loaded.
@@ -27,3 +25,14 @@ run.onclick = () => {
 	browser.tabs.executeScript({ file: "/commonapp/lookup.js" })
 	setTimeout(() => browser.tabs.executeScript({ file: "/commonapp/main.js" }), 100) // just in case
 }
+
+window.onload = () => {
+	console.log('run onload');
+	browser.storage.sync.get(["name"],function(contents) { 
+		console.log(contents);
+		if (contents != {}){
+			file.dispatchEvent( new Event("change"));
+		}
+	});
+}
+	

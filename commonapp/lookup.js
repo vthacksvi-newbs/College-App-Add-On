@@ -3,10 +3,8 @@ function extractXmlValue(xml, id) {
 		"container_ques_173": function() { // first name
 			//return getxmlvalue(me.name.first)
 			console.log(xml.querySelector("user_info"))
-			console.log(xml.querySelector("user_info > me > name > first"))
-			console.log(xml.querySelector("user_info > me > name > first").innerText)
-			console.log(xml.querySelector("user_info > me > name > first").nodeValue)
-			return xml.querySelector("user_info > me > name > first").nodeValue
+			console.log(xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first"))
+			return xml.querySelector("user_info").querySelector("me").querySelector("name").querySelector("first").nodeValue
 		},
 		"container_ques_174": function() { // middle name
 			return "middlename"
